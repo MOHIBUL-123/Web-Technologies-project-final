@@ -1,0 +1,42 @@
+<?php
+
+require_once __DIR__ .
+'/../helpers/auth_helper.php';
+
+require_once __DIR__ .
+'/../models/BorrowRecord.php';
+
+
+class ReportController
+{
+    public function index()
+    {
+        auth_check('admin');
+
+
+        $borrowModel =
+            new BorrowRecord();
+
+
+        // TOP BOOKS
+
+        $topBooks =
+            $borrowModel->getTopBorrowedBooks();
+
+
+        // TOP MEMBERS
+
+        $topMembers =
+            $borrowModel->getTopMembers();
+
+
+        // MONTHLY REPORT
+
+        $monthlyBorrows =
+            $borrowModel->getMonthlyBorrows();
+
+
+        require_once __DIR__ .
+        '/../views/reports/index.php';
+    }
+}

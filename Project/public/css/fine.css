@@ -1,0 +1,83 @@
+/* =========================
+   PAGE
+========================= */
+
+.container{
+    width: 90%;
+    margin: 30px auto;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+h1{
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   SUMMARY CARD
+========================= */
+
+.fine-summary{
+    background: #fee2e2;
+
+    color: #991b1b;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+.fine-summary span{
+    color: #dc2626;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+table{
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+}
+
+
+table th,
+table td{
+    padding: 14px;
+
+    border: 1px solid #ddd;
+
+    text-align: center;
+}
+
+
+table th{
+    background: #1e293b;
+
+    color: white;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.unpaid{
+    color: #dc2626;
+
+    font-weight: bold;
+}
