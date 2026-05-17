@@ -1,0 +1,42 @@
+.flash-message{
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.flash-message.success{
+    background: green;
+}
+
+.flash-message.error{
+    background: red;
+}
+
+.flash-message.warning{
+    background: orange;
+}
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.error-message{
+    width: 100%;
+
+    background: #dc2626;
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    font-weight: bold;
+}

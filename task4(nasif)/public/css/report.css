@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f4f4;
+}
+
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.report-container{
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 40px auto;
+}
+
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.report-container h1{
+    text-align: center;
+
+    font-size: 42px;
+
+    margin-bottom: 40px;
+
+    color: #0f172a;
+}
+
+
+
+/* =========================
+   REPORT BOX
+========================= */
+
+.report-box{
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    margin-bottom: 40px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.report-box h2{
+    margin-bottom: 20px;
+
+    color: #1e293b;
+}
+
+
+
+/* =========================
+   TABLE
+========================= */
+
+table{
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+
+table thead{
+    background: #0f172a;
+
+    color: white;
+}
+
+
+
+table th,
+table td{
+    padding: 14px;
+
+    border-bottom:
+        1px solid #ddd;
+
+    text-align: left;
+}
+
+
+
+table tbody tr:hover{
+    background: #f8fafc;
+}
+
+
+
+/* =========================
+   CHART
+========================= */
+
+canvas{
+    width: 100% !important;
+
+    max-height: 450px;
+}
