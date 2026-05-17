@@ -14,7 +14,7 @@ $pageTitle = "Create Librarian";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/create-user.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/create-user.css">
 
 
 <?php require_once __DIR__ .
@@ -35,10 +35,10 @@ $pageTitle = "Create Librarian";
 
 
         <form method="POST"
-              action="/Library-Management-System/Project/users/store">
+              action="/project/Web-Technologies-project-final/Project/users/store">
 
 
-            <!-- NAME -->
+            
 
             <div class="form-group">
 
@@ -57,7 +57,7 @@ $pageTitle = "Create Librarian";
 
  </div>
 
-            <!-- EMAIL -->
+            
 
             <div class="form-group">
 
@@ -77,7 +77,7 @@ $pageTitle = "Create Librarian";
 
 
 
-            <!-- PHONE -->
+            
 
             <div class="form-group">
 
@@ -98,7 +98,7 @@ $pageTitle = "Create Librarian";
 
 
 
-            <!-- PASSWORD -->
+            
 
             <div class="form-group">
 
@@ -116,7 +116,7 @@ $pageTitle = "Create Librarian";
 
 
 
-            <!-- BUTTON -->
+            
 
             <button type="submit">
 

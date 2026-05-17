@@ -9,7 +9,7 @@ $pageTitle = "My Borrowed Books";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/borrow.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/borrow.css">
 
 
 <?php require_once __DIR__ .
@@ -25,7 +25,7 @@ $pageTitle = "My Borrowed Books";
     </div>
 
 
-    <!-- FLASH MESSAGE -->
+    
 
     <?php if(isset($_SESSION['message'])): ?>
 
@@ -43,7 +43,7 @@ $pageTitle = "My Borrowed Books";
     <?php endif; ?>
 
 
-    <!-- BORROW TABLE -->
+    
 
     <table>
 
@@ -168,7 +168,7 @@ $pageTitle = "My Borrowed Books";
 </div>
 
 
-<script src="/Library-Management-System/Project/public/js/borrow.js"></script>
+<script src="/project/Web-Technologies-project-final/Project/public/js/borrow.js"></script>
 
 <?php require_once __DIR__ .
 '/../layouts/footer.php'; ?>

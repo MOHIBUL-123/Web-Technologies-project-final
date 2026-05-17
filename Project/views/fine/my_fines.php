@@ -9,7 +9,7 @@ $pageTitle = "My Fines";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/fine.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/fine.css">
 
 
 <?php require_once __DIR__ .
@@ -25,7 +25,7 @@ $pageTitle = "My Fines";
     </h1>
 
 
-    <!-- TOTAL BALANCE -->
+    
 
     <div class="fine-summary">
 
@@ -40,7 +40,7 @@ $pageTitle = "My Fines";
     </div>
 
 
-    <!-- FINES TABLE -->
+    
 
     <table>
 

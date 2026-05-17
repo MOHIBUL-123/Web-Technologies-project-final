@@ -6,7 +6,6 @@ form.addEventListener("submit", function(event)
 {
     let isValid = true;
 
-    // Input Values
     const name = document.getElementById("name").value.trim();
 
     const email = document.getElementById("email").value.trim();
@@ -15,12 +14,10 @@ form.addEventListener("submit", function(event)
 
     const password = document.getElementById("password").value.trim();
 
-    // Clear Previous Errors
     clearErrors();
 
-    // =========================
-    // NAME VALIDATION
-    // =========================
+
+
 
     if(name === "")
     {
@@ -29,9 +26,8 @@ form.addEventListener("submit", function(event)
         isValid = false;
     }
 
-    // =========================
-    // EMAIL VALIDATION
-    // =========================
+
+
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -42,9 +38,8 @@ form.addEventListener("submit", function(event)
         isValid = false;
     }
 
-    // =========================
-    // PHONE VALIDATION
-    // =========================
+
+
 
    if(!/^[0-9]+$/.test(phone))
 {
@@ -53,9 +48,8 @@ form.addEventListener("submit", function(event)
     isValid = false;
 }
 
-    // =========================
-    // PASSWORD VALIDATION
-    // =========================
+
+
 
     if(password.length < 8)
     {
@@ -76,9 +70,8 @@ form.addEventListener("submit", function(event)
     isValid = false;
 }
 
-    // =========================
-    // STOP FORM SUBMIT
-    // =========================
+
+
 
     if(!isValid)
     {
@@ -87,9 +80,7 @@ form.addEventListener("submit", function(event)
 });
 
 
-// =========================
-// SHOW ERROR
-// =========================
+
 
 function showError(inputId, message)
 {
@@ -102,9 +93,7 @@ function showError(inputId, message)
 }
 
 
-// =========================
-// CLEAR ERRORS
-// =========================
+
 
 function clearErrors()
 {

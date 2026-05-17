@@ -14,7 +14,7 @@ $pageTitle = "Reports";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/report.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/report.css">
 
 
 <?php require_once __DIR__ .
@@ -30,9 +30,9 @@ $pageTitle = "Reports";
     </h1>
 
 
-    <!-- ========================= -->
-    <!-- TOP BORROWED BOOKS -->
-    <!-- ========================= -->
+    
+    
+    
 
     <div class="report-box">
 
@@ -86,9 +86,9 @@ $pageTitle = "Reports";
 
 
 
-    <!-- ========================= -->
-    <!-- TOP MEMBERS -->
-    <!-- ========================= -->
+    
+    
+    
 
     <div class="report-box">
 
@@ -142,9 +142,9 @@ $pageTitle = "Reports";
 
 
 
-    <!-- ========================= -->
-    <!-- CHART -->
-    <!-- ========================= -->
+    
+    
+    
 
     <div class="report-box">
 
@@ -162,9 +162,9 @@ $pageTitle = "Reports";
 
 
 
-<!-- ========================= -->
-<!-- CHART JS -->
-<!-- ========================= -->
+
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 

@@ -14,7 +14,7 @@ $pageTitle = "Admin Dashboard";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/admin.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/admin.css">
 
 
 <?php require_once __DIR__ .
@@ -38,16 +38,16 @@ $pageTitle = "Admin Dashboard";
     </p>
 
 
-    <!-- ========================= -->
-    <!-- QUICK ACTIONS -->
-    <!-- ========================= -->
+    
+    
+    
 
   <div class="dashboard-cards">
 
 
-    <!-- GENRES -->
+    
 
-    <a href="/Library-Management-System/Project/genres"
+    <a href="/project/Web-Technologies-project-final/Project/genres"
        class="dashboard-link">
 
         <div class="card">
@@ -70,9 +70,9 @@ $pageTitle = "Admin Dashboard";
 
 
 
-    <!-- BOOKS -->
+    
 
-    <a href="/Library-Management-System/Project/books"
+    <a href="/project/Web-Technologies-project-final/Project/books"
        class="dashboard-link">
 
         <div class="card">
@@ -95,9 +95,9 @@ $pageTitle = "Admin Dashboard";
 
 
 
-    <!-- USERS -->
+    
 
-    <a href="/Library-Management-System/Project/users"
+    <a href="/project/Web-Technologies-project-final/Project/users"
        class="dashboard-link">
 
         <div class="card">
@@ -123,7 +123,7 @@ $pageTitle = "Admin Dashboard";
 </div>
 
 
-<script src="/Library-Management-System/Project/public/js/admin.js"></script>
+<script src="/project/Web-Technologies-project-final/Project/public/js/admin.js"></script>
 
 <?php require_once __DIR__ .
 '/../layouts/footer.php'; ?>

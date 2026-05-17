@@ -5,9 +5,7 @@
 }
 
 
-/* =========================
-   TOP BAR
-========================= */
+
 
 .top-bar{
     display: flex;
@@ -21,9 +19,7 @@
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+
 
 .add-btn,
 .back-btn,
@@ -45,9 +41,7 @@ button:hover{
 }
 
 
-/* =========================
-   TABLE
-========================= */
+
 
 table{
     width: 100%;
@@ -73,9 +67,7 @@ table tr:hover{
 }
 
 
-/* =========================
-   FORM CARD
-========================= */
+
 
 .form-card{
     background: white;
@@ -91,9 +83,7 @@ table tr:hover{
 }
 
 
-/* =========================
-   FORM
-========================= */
+
 
 .form-group{
     margin-bottom: 20px;
@@ -121,9 +111,7 @@ select:focus{
 }
 
 
-/* =========================
-   ERRORS
-========================= */
+
 
 .field-error{
     color: red;
@@ -132,9 +120,7 @@ select:focus{
 }
 
 
-/* =========================
-   FLASH MESSAGE
-========================= */
+
 
 .message-box{
     padding: 15px;
@@ -216,9 +202,7 @@ select:focus{
     color: red;
     font-weight: bold;
 }
-/* =========================
-   BOOK DETAILS
-========================= */
+
 
 .details-card{
     max-width: 700px;
@@ -239,9 +223,7 @@ select:focus{
 }
 
 
-/* =========================
-   AVAILABILITY BADGE
-========================= */
+
 
 .availability-badge{
     display: inline-block;
@@ -253,7 +235,7 @@ select:focus{
 }
 
 
-/* AVAILABLE */
+
 
 .availability-badge.available{
     background: #d1fae5;
@@ -261,15 +243,13 @@ select:focus{
 }
 
 
-/* UNAVAILABLE */
+
 
 .availability-badge.unavailable{
     background: #fee2e2;
     color: #991b1b;
 }
-/* =========================
-   SEARCH BOX
-========================= */
+
 
 .search-box{
     margin-bottom: 20px;

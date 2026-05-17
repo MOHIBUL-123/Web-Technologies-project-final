@@ -16,9 +16,7 @@ class Genre
     }
 
 
-    // =========================
-    // GET ALL GENRES
-    // =========================
+
 
     public function getAll()
     {
@@ -37,9 +35,7 @@ class Genre
     }
 
 
-    // =========================
-    // CREATE GENRE
-    // =========================
+
 
     public function create($name)
     {
@@ -72,9 +68,9 @@ class Genre
 
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
-// =========================
-// FIND BY ID
-// =========================
+
+
+
 
 public function findById($id)
 {
@@ -95,9 +91,7 @@ public function findById($id)
 }
 
 
-// =========================
-// UPDATE GENRE
-// =========================
+
 
 public function update($id, $name)
 {
@@ -115,9 +109,9 @@ public function update($id, $name)
         ':name' => $name
     ]);
 }
-// =========================
-// CHECK BOOKS EXIST
-// =========================
+
+
+
 
 public function hasBooks($id)
 {
@@ -141,9 +135,7 @@ public function hasBooks($id)
 }
 
 
-// =========================
-// DELETE GENRE
-// =========================
+
 
 public function delete($id)
 {

@@ -17,9 +17,7 @@ class Fine
     }
 
 
-    // =========================
-    // CREATE OR UPDATE FINE
-    // =========================
+
 
     public function upsertFine(
         $borrowRecordId,
@@ -28,7 +26,7 @@ class Fine
         $overdueDays
     )
     {
-        // CHECK EXISTING FINE
+
 
         $sql = "
             SELECT id
@@ -50,8 +48,6 @@ class Fine
         $existing =
             $stmt->fetch(PDO::FETCH_ASSOC);
 
-
-        // UPDATE EXISTING
 
         if($existing)
         {
@@ -83,8 +79,6 @@ class Fine
             ]);
         }
 
-
-        // INSERT NEW
 
         $insertSql = "
             INSERT INTO fines
@@ -121,9 +115,9 @@ class Fine
                 $overdueDays
         ]);
     }
-    // =========================
-// MEMBER UNPAID FINES
-// =========================
+
+
+
 
 public function getMemberFines($memberId)
 {
@@ -167,9 +161,9 @@ public function getMemberFines($memberId)
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-// =========================
-// TOTAL UNPAID BALANCE
-// =========================
+
+
+
 
 public function getTotalUnpaid($memberId)
 {
@@ -203,9 +197,9 @@ public function getTotalUnpaid($memberId)
 
     return $result['total'];
 }
-// =========================
-// ALL UNPAID FINES
-// =========================
+
+
+
 
 public function getAllUnpaidFines($search = '')
 {
@@ -234,8 +228,6 @@ public function getAllUnpaidFines($search = '')
             fines.is_paid = 0
     ";
 
-
-    // SEARCH
 
     if(!empty($search))
     {
@@ -269,9 +261,9 @@ public function getAllUnpaidFines($search = '')
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-// =========================
-// MARK FINE AS PAID
-// =========================
+
+
+
 
 public function markAsPaid($fineId)
 {
@@ -294,9 +286,9 @@ public function markAsPaid($fineId)
             $fineId
     ]);
 }
-// =========================
-// TOTAL UNPAID FINE AMOUNT
-// =========================
+
+
+
 
 public function getOutstandingFineTotal($memberId)
 {

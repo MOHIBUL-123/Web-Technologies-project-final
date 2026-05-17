@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Genre Module Loaded");
 
 
-    // =========================
-    // DELETE CONFIRMATION
-    // =========================
+
 
     const deleteForms =
         document.querySelectorAll(".delete-form");

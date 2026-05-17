@@ -1,4 +1,4 @@
-<script src="/Library-Management-System/Project/public/js/layout.js"></script>
+<script src="/project/Web-Technologies-project-final/Project/public/js/layout.js"></script>
 
 </body>
 </html>

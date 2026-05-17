@@ -12,7 +12,6 @@ class Member
         $this->conn = $database->connect();
     }
 
-    // Register New Member
     public function register($data)
     {
         $sql = "INSERT INTO members
@@ -30,7 +29,6 @@ class Member
         ]);
     }
 
-    // Find User By Email
     public function findByEmail($email)
     {
         $sql = "SELECT * FROM members WHERE email = :email";
@@ -43,7 +41,7 @@ class Member
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-    // Find User By Phone
+
 public function findByPhone($phone)
 {
     $sql = "SELECT * FROM members
@@ -57,9 +55,9 @@ public function findByPhone($phone)
 
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
-// =========================
-// FIND BY ID
-// =========================
+
+
+
 
 public function findById($id)
 {
@@ -74,9 +72,9 @@ public function findById($id)
 
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
-// =========================
-// UPDATE PROFILE
-// =========================
+
+
+
 
 public function updateProfile($data)
 {
@@ -96,9 +94,9 @@ public function updateProfile($data)
         ':id' => $data['id']
     ]);
 }
-// =========================
-// CHANGE PASSWORD
-// =========================
+
+
+
 
 public function changePassword($id, $newPassword)
 {
@@ -113,9 +111,9 @@ public function changePassword($id, $newPassword)
         ':id' => $id
     ]);
 }
-// =========================
-// GET ALL USERS
-// =========================
+
+
+
 
 public function getAllUsers()
 {
@@ -134,9 +132,9 @@ public function getAllUsers()
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-// =========================
-// CREATE LIBRARIAN
-// =========================
+
+
+
 
 public function createLibrarian($data)
 {
@@ -178,9 +176,9 @@ public function createLibrarian($data)
             $data['phone']
     ]);
 }
-// =========================
-// UPDATE USER
-// =========================
+
+
+
 
 public function updateUser($data)
 {
@@ -217,9 +215,9 @@ public function updateUser($data)
             $data['role']
     ]);
 }
-// =========================
-// DELETE USER
-// =========================
+
+
+
 
 public function deleteUser($id)
 {

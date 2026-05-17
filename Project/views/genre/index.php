@@ -9,7 +9,7 @@ $pageTitle = "Genres";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/genre.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/genre.css">
 
 
 <?php require_once __DIR__ .
@@ -23,7 +23,7 @@ $pageTitle = "Genres";
         <h1>Genres</h1>
 
         <a class="add-btn"
-           href="/Library-Management-System/Project/genres/create">
+           href="/project/Web-Technologies-project-final/Project/genres/create">
 
             Add Genre
 
@@ -32,7 +32,7 @@ $pageTitle = "Genres";
     </div>
 
 
-    <!-- FLASH MESSAGE -->
+    
 
     <?php if(isset($_SESSION['message'])): ?>
 
@@ -50,7 +50,7 @@ $pageTitle = "Genres";
     <?php endif; ?>
 
 
-    <!-- GENRE TABLE -->
+    
 
     <table>
 
@@ -83,13 +83,13 @@ $pageTitle = "Genres";
                 <td>
 
     <a class="edit-btn"
-       href="/Library-Management-System/Project/genres/edit?id=<?= $genre['id'] ?>">
+       href="/project/Web-Technologies-project-final/Project/genres/edit?id=<?= $genre['id'] ?>">
 
         Edit
 
     </a>
      <form method="POST"
-          action="/Library-Management-System/Project/genres/delete"
+          action="/project/Web-Technologies-project-final/Project/genres/delete"
           class="delete-form">
 
         <input
@@ -118,6 +118,6 @@ $pageTitle = "Genres";
     </table>
 
 </div>
-<script src="/Library-Management-System/Project/public/js/genre.js"></script>
+<script src="/project/Web-Technologies-project-final/Project/public/js/genre.js"></script>
 <?php require_once __DIR__ .
 '/../layouts/footer.php'; ?>

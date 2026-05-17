@@ -9,7 +9,7 @@ $pageTitle = "Login";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/login.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/login.css">
 
 
 <?php require_once __DIR__ .
@@ -21,7 +21,7 @@ $pageTitle = "Login";
     <h2>Member Login</h2>
 
 
-    <!-- FLASH MESSAGE -->
+    
 
     <?php if(isset($_SESSION['message'])): ?>
 
@@ -42,7 +42,7 @@ $pageTitle = "Login";
     <form method="POST" id="loginForm">
 
 
-        <!-- EMAIL -->
+        
 
         <div class="form-group">
 
@@ -70,7 +70,7 @@ $pageTitle = "Login";
         </div>
 
 
-        <!-- PASSWORD -->
+        
 
         <div class="form-group">
 
@@ -109,7 +109,7 @@ $pageTitle = "Login";
     <br>
 
 
-    <a href="/Library-Management-System/Project/register">
+    <a href="/project/Web-Technologies-project-final/Project/register">
 
         Create New Account
 
@@ -118,7 +118,7 @@ $pageTitle = "Login";
 </div>
 
 
-<script src="/Library-Management-System/Project/public/js/login.js"></script>
+<script src="/project/Web-Technologies-project-final/Project/public/js/login.js"></script>
 
 <?php require_once __DIR__ .
 '/../layouts/footer.php'; ?>

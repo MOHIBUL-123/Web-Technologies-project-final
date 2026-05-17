@@ -8,9 +8,9 @@ require_once __DIR__ .
 
 class FineController
 {
-    // =========================
-    // MEMBER FINES PAGE
-    // =========================
+
+
+
 
     public function myFines()
     {
@@ -23,15 +23,11 @@ class FineController
             $_SESSION['member_id'];
 
 
-        // GET FINES
-
         $fines =
             $fineModel->getMemberFines(
                 $memberId
             );
 
-
-        // TOTAL BALANCE
 
         $total =
             $fineModel->getTotalUnpaid(
@@ -42,9 +38,9 @@ class FineController
         require_once __DIR__ .
         '/../views/fine/my_fines.php';
     }
-    // =========================
-// LIBRARIAN FINE DASHBOARD
-// =========================
+
+
+
 
 public function dashboard()
 {
@@ -54,13 +50,9 @@ public function dashboard()
         new Fine();
 
 
-    // SEARCH
-
     $search =
         trim($_GET['search'] ?? '');
 
-
-    // GET FINES
 
     $fines =
         $fineModel->getAllUnpaidFines(
@@ -71,9 +63,9 @@ public function dashboard()
     require_once __DIR__ .
     '/../views/fine/dashboard.php';
 }
-// =========================
-// PAY FINE API
-// =========================
+
+
+
 
 public function payFine()
 {
@@ -85,8 +77,6 @@ public function payFine()
     $fineId =
         $_POST['fine_id'] ?? null;
 
-
-    // UPDATE
 
     $success =
         $fineModel->markAsPaid(

@@ -9,7 +9,7 @@ $pageTitle = "Books";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/book.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/book.css">
 
 
 <?php require_once __DIR__ .
@@ -25,7 +25,7 @@ $pageTitle = "Books";
         <?php if(has_role(['admin', 'librarian'])): ?>
 
             <a class="add-btn"
-               href="/Library-Management-System/Project/books/create">
+               href="/project/Web-Technologies-project-final/Project/books/create">
 
                 Add Book
 
@@ -36,7 +36,7 @@ $pageTitle = "Books";
     </div>
 
 
-    <!-- FLASH MESSAGE -->
+    
 
     <?php if(isset($_SESSION['message'])): ?>
 
@@ -63,7 +63,7 @@ $pageTitle = "Books";
 </div>
 
 
-    <!-- BOOK TABLE -->
+    
 
     <table>
 
@@ -114,7 +114,7 @@ $pageTitle = "Books";
 
                <td>
 
-    <a href="/Library-Management-System/Project/books/details?id=<?= $book['id'] ?>">
+    <a href="/project/Web-Technologies-project-final/Project/books/details?id=<?= $book['id'] ?>">
 
         <?= $book['title'] ?>
 
@@ -151,7 +151,7 @@ $pageTitle = "Books";
                 </td>
 
 
-                <!-- ACTIONS -->
+                
 
                 <?php if(
                     has_role(['admin', 'librarian']) ||
@@ -160,14 +160,14 @@ $pageTitle = "Books";
 
                     <td>
 
-                        <!-- MEMBER BORROW -->
+                        
 
                         <?php if(has_role('member')): ?>
 
                             <?php if($book['available_copies'] > 0): ?>
 
                                 <form method="POST"
-                                      action="/Library-Management-System/Project/borrow"
+                                      action="/project/Web-Technologies-project-final/Project/borrow"
                                       class="borrow-form">
 
                                     <input
@@ -198,12 +198,12 @@ $pageTitle = "Books";
                         <?php endif; ?>
 
 
-                        <!-- ADMIN / LIBRARIAN -->
+                        
 
                         <?php if(has_role(['admin', 'librarian'])): ?>
 
                             <a class="edit-btn"
-                               href="/Library-Management-System/Project/books/edit?id=<?= $book['id'] ?>">
+                               href="/project/Web-Technologies-project-final/Project/books/edit?id=<?= $book['id'] ?>">
 
                                 Edit
 
@@ -211,7 +211,7 @@ $pageTitle = "Books";
 
 
                             <form method="POST"
-                                  action="/Library-Management-System/Project/books/delete"
+                                  action="/project/Web-Technologies-project-final/Project/books/delete"
                                   class="delete-form">
 
                                 <input
@@ -251,7 +251,7 @@ $pageTitle = "Books";
 
 </script>
 
-<script src="/Library-Management-System/Project/public/js/book.js"></script>
+<script src="/project/Web-Technologies-project-final/Project/public/js/book.js"></script>
 
 <?php require_once __DIR__ .
 '/../layouts/footer.php'; ?>

@@ -16,9 +16,7 @@ class BorrowRecord
     }
 
 
-    // =========================
-    // CREATE BORROW RECORD
-    // =========================
+
 
     public function create($data)
     {
@@ -65,9 +63,7 @@ class BorrowRecord
     }
 
 
-    // =========================
-    // ACTIVE BORROW CHECK
-    // =========================
+
 
    public function alreadyBorrowed(
     $memberId,
@@ -111,9 +107,9 @@ class BorrowRecord
 
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
-    // =========================
-// MEMBER BORROWED BOOKS
-// =========================
+
+
+
 
 public function getMemberBorrows($memberId)
 {
@@ -147,13 +143,12 @@ public function getMemberBorrows($memberId)
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-// =========================
-// RETURN BOOK
-// =========================
 
-// =========================
-// PROCESS RETURN
-// =========================
+
+
+
+
+
 
 public function processReturn($borrowId)
 {
@@ -181,9 +176,9 @@ public function processReturn($borrowId)
             $borrowId
     ]);
 }
-// =========================
-// GET PENDING REQUESTS
-// =========================
+
+
+
 
 public function getPendingRequests()
 {
@@ -216,9 +211,9 @@ public function getPendingRequests()
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-// =========================
-// APPROVE REQUEST
-// =========================
+
+
+
 
 public function approveRequest($id)
 {
@@ -246,9 +241,6 @@ public function approveRequest($id)
 
 
 
-// =========================
-// REJECT REQUEST
-// =========================
 
 public function rejectRequest($id)
 {
@@ -270,9 +262,9 @@ public function rejectRequest($id)
         ':id' => $id
     ]);
 }
-// =========================
-// SEARCH ACTIVE LOANS
-// =========================
+
+
+
 
 public function searchActiveLoans($search)
 {
@@ -321,9 +313,9 @@ public function searchActiveLoans($search)
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-// =========================
-// GET OVERDUE ACTIVE BORROWS
-// =========================
+
+
+
 
 public function getOverdueBorrows()
 {
@@ -346,9 +338,9 @@ public function getOverdueBorrows()
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-// =========================
-// ACTIVE LOAN COUNT
-// =========================
+
+
+
 
 public function getActiveLoanCount($memberId)
 {
@@ -376,9 +368,9 @@ public function getActiveLoanCount($memberId)
 
     return $result['total'];
 }
-// =========================
-// UPCOMING DUE COUNT
-// =========================
+
+
+
 
 public function getUpcomingDueCount($memberId)
 {
@@ -408,9 +400,9 @@ public function getUpcomingDueCount($memberId)
 
     return $result['total'];
 }
-// =========================
-// TOP BORROWED BOOKS
-// =========================
+
+
+
 
 public function getTopBorrowedBooks()
 {
@@ -441,9 +433,9 @@ public function getTopBorrowedBooks()
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-// =========================
-// TOP MEMBERS
-// =========================
+
+
+
 
 public function getTopMembers()
 {
@@ -474,9 +466,9 @@ public function getTopMembers()
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-// =========================
-// MONTHLY BORROWS
-// =========================
+
+
+
 
 public function getMonthlyBorrows()
 {

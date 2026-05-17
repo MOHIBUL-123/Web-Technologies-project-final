@@ -14,7 +14,7 @@ $pageTitle = "Librarian Dashboard";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/librarian.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/librarian.css">
 
 
 <?php require_once __DIR__ .
@@ -38,14 +38,14 @@ $pageTitle = "Librarian Dashboard";
     </p>
 
 
-    <!-- ========================= -->
-    <!-- QUICK ACTIONS -->
-    <!-- ========================= -->
+    
+    
+    
 
     <div class="dashboard-cards">
 
         <a class="card"
-           href="/Library-Management-System/Project/genres">
+           href="/project/Web-Technologies-project-final/Project/genres">
 
             <h2>Genres</h2>
 
@@ -57,7 +57,7 @@ $pageTitle = "Librarian Dashboard";
 
 
         <a class="card"
-           href="/Library-Management-System/Project/books">
+           href="/project/Web-Technologies-project-final/Project/books">
 
             <h2>Books</h2>
 
@@ -72,7 +72,7 @@ $pageTitle = "Librarian Dashboard";
 </div>
 
 
-<script src="/Library-Management-System/Project/public/js/librarian.js"></script>
+<script src="/project/Web-Technologies-project-final/Project/public/js/librarian.js"></script>
 
 <?php require_once __DIR__ .
 '/../layouts/footer.php'; ?>

@@ -14,7 +14,7 @@ $pageTitle = "Users";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/users.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/users.css">
 
 
 <?php require_once __DIR__ .
@@ -31,7 +31,7 @@ $pageTitle = "Users";
 
         </h1>
 
-        <a href="/Library-Management-System/Project/users/create"
+        <a href="/project/Web-Technologies-project-final/Project/users/create"
            class="add-btn">
 
             Create Librarian
@@ -107,7 +107,7 @@ $pageTitle = "Users";
 
                     <td class="actions">
 
-                        <a href="/Library-Management-System/Project/users/edit?id=<?= $user['id'] ?>"
+                        <a href="/project/Web-Technologies-project-final/Project/users/edit?id=<?= $user['id'] ?>"
                            class="edit-btn">
 
                             Edit
@@ -115,7 +115,7 @@ $pageTitle = "Users";
                         </a>
 
 <form method="POST"
-      action="/Library-Management-System/Project/users/delete"
+      action="/project/Web-Technologies-project-final/Project/users/delete"
 
       onsubmit="
         return confirm(

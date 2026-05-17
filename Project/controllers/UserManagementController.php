@@ -9,9 +9,9 @@ require_once __DIR__ .
 
 class UserManagementController
 {
-    // =========================
-    // USER LIST
-    // =========================
+
+
+
 
     public function index()
     {
@@ -29,9 +29,9 @@ class UserManagementController
         require_once __DIR__ .
         '/../views/users/index.php';
     }
-    // =========================
-// CREATE PAGE
-// =========================
+
+
+
 
 public function create()
 {
@@ -40,9 +40,9 @@ public function create()
     require_once __DIR__ .
     '/../views/users/create.php';
 }
-// =========================
-// STORE LIBRARIAN
-// =========================
+
+
+
 
 public function store()
 {
@@ -66,8 +66,6 @@ public function store()
         trim($_POST['password']);
 
 
-    // REQUIRED VALIDATION
-
     if(
         empty($name) ||
         empty($email) ||
@@ -84,14 +82,12 @@ public function store()
 
 
         header(
-            "Location: /Library-Management-System/Project/users/create"
+            "Location: /project/Web-Technologies-project-final/Project/users/create"
         );
 
         exit;
     }
 
-
-    // EMAIL EXISTS
 
     if(
         $memberModel->findByEmail(
@@ -108,14 +104,12 @@ public function store()
 
 
         header(
-            "Location: /Library-Management-System/Project/users/create"
+            "Location: /project/Web-Technologies-project-final/Project/users/create"
         );
 
         exit;
     }
 
-
-    // HASH PASSWORD
 
     $hashedPassword =
         password_hash(
@@ -123,8 +117,6 @@ public function store()
             PASSWORD_DEFAULT
         );
 
-
-    // INSERT USER
 
     $memberModel->createLibrarian([
 
@@ -139,12 +131,8 @@ public function store()
     ]);
 
 
-    // CLEAR OLD INPUT
-
     unset($_SESSION['old']);
 
-
-    // SUCCESS MESSAGE
 
     $_SESSION['message'] =
         "Librarian Created Successfully";
@@ -154,17 +142,15 @@ public function store()
         "success";
 
 
-    // REDIRECT
-
     header(
-        "Location: /Library-Management-System/Project/users"
+        "Location: /project/Web-Technologies-project-final/Project/users"
     );
 
     exit;
 }
-// =========================
-// EDIT PAGE
-// =========================
+
+
+
 
 public function edit()
 {
@@ -192,9 +178,9 @@ public function edit()
     require_once __DIR__ .
     '/../views/users/edit.php';
 }
-// =========================
-// UPDATE USER
-// =========================
+
+
+
 
 public function update()
 {
@@ -236,14 +222,14 @@ public function update()
 
 
     header(
-        "Location: /Library-Management-System/Project/users"
+        "Location: /project/Web-Technologies-project-final/Project/users"
     );
 
     exit;
 }
-// =========================
-// DELETE USER
-// =========================
+
+
+
 
 public function delete()
 {
@@ -270,7 +256,7 @@ public function delete()
 
 
     header(
-        "Location: /Library-Management-System/Project/users"
+        "Location: /project/Web-Technologies-project-final/Project/users"
     );
 
     exit;

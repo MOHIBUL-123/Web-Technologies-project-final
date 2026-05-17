@@ -9,7 +9,7 @@ $pageTitle = "Edit Book";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/book.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/book.css">
 
 
 <?php require_once __DIR__ .
@@ -25,7 +25,7 @@ $pageTitle = "Edit Book";
         <form method="POST">
 
 
-            <!-- GENRE -->
+            
 
             <div class="form-group">
 
@@ -72,7 +72,7 @@ $pageTitle = "Edit Book";
             </div>
 
 
-            <!-- TITLE -->
+            
 
             <div class="form-group">
 
@@ -97,7 +97,7 @@ $pageTitle = "Edit Book";
             </div>
 
 
-            <!-- AUTHOR -->
+            
 
             <div class="form-group">
 
@@ -122,7 +122,7 @@ $pageTitle = "Edit Book";
             </div>
 
 
-            <!-- ISBN -->
+            
 
             <div class="form-group">
 
@@ -147,7 +147,7 @@ $pageTitle = "Edit Book";
             </div>
 
 
-            <!-- COPIES -->
+            
 
             <div class="form-group">
 
@@ -172,7 +172,7 @@ $pageTitle = "Edit Book";
             </div>
 
 
-            <!-- SHELF -->
+            
 
             <div class="form-group">
 
@@ -197,7 +197,7 @@ $pageTitle = "Edit Book";
             </div>
 
 
-            <!-- YEAR -->
+            
 
             <div class="form-group">
 
@@ -234,7 +234,7 @@ $pageTitle = "Edit Book";
 
 
         <a class="back-btn"
-           href="/Library-Management-System/Project/books">
+           href="/project/Web-Technologies-project-final/Project/books">
 
             Back To Books
 
@@ -245,7 +245,7 @@ $pageTitle = "Edit Book";
 </div>
 
 
-<script src="/Library-Management-System/Project/public/js/book.js"></script>
+<script src="/project/Web-Technologies-project-final/Project/public/js/book.js"></script>
 
 <?php require_once __DIR__ .
 '/../layouts/footer.php'; ?>

@@ -3,7 +3,7 @@
 class Database
 {
     private $host = "localhost";
-    private $dbname = "library_management_system";
+    private $dbname = "library-management-system";
     private $username = "root";
     private $password = "";
 

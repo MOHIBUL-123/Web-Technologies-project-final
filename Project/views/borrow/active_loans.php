@@ -9,7 +9,7 @@ $pageTitle = "Active Loans";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/borrow.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/borrow.css">
 
 
 <?php require_once __DIR__ .
@@ -29,9 +29,9 @@ $pageTitle = "Active Loans";
     </div>
 
 
-    <!-- ========================= -->
-    <!-- AJAX SEARCH -->
-    <!-- ========================= -->
+    
+    
+    
 
     <div class="search-form">
 
@@ -50,9 +50,9 @@ $pageTitle = "Active Loans";
     </div>
 
 
-    <!-- ========================= -->
-    <!-- FLASH MESSAGE -->
-    <!-- ========================= -->
+    
+    
+    
 
     <?php if(isset($_SESSION['message'])): ?>
 
@@ -73,9 +73,9 @@ $pageTitle = "Active Loans";
     <?php endif; ?>
 
 
-    <!-- ========================= -->
-    <!-- ACTIVE LOANS TABLE -->
-    <!-- ========================= -->
+    
+    
+    
 
     <table>
 
@@ -153,7 +153,7 @@ $pageTitle = "Active Loans";
                     <td>
 
                         <form method="POST"
-                              action="/Library-Management-System/Project/return-book"
+                              action="/project/Web-Technologies-project-final/Project/return-book"
 
                               class="return-form">
 
@@ -204,7 +204,7 @@ $pageTitle = "Active Loans";
 </div>
 
 
-<script src="/Library-Management-System/Project/public/js/borrow.js"></script>
+<script src="/project/Web-Technologies-project-final/Project/public/js/borrow.js"></script>
 
 
 <?php require_once __DIR__ .

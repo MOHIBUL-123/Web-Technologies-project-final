@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // =========================
-    // PROFILE FORM VALIDATION
-    // =========================
+
+
 
     const profileForm =
         document.getElementById("profileForm");
@@ -29,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     document.getElementById("phone")
                     .value.trim();
 
-                // Name Validation
 
                 if(name === "")
                 {
@@ -41,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     isValid = false;
                 }
 
-                // Email Validation
 
                 const emailPattern =
                     /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -56,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     isValid = false;
                 }
 
-                // Phone Validation
 
                 if(!/^[0-9]+$/.test(phone))
                 {
@@ -87,9 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =========================
-    // PASSWORD FORM VALIDATION
-    // =========================
+
 
     const passwordForm =
         document.getElementById("passwordForm");
@@ -114,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         "new_password"
                     ).value.trim();
 
-                // Current Password
 
                 if(currentPassword === "")
                 {
@@ -126,7 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     isValid = false;
                 }
 
-                // New Password
 
                 if(newPassword.length < 8)
                 {
@@ -149,9 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// =========================
-// SHOW ERROR
-// =========================
+
 
 function showError(inputId, message)
 {
@@ -167,9 +157,7 @@ function showError(inputId, message)
 }
 
 
-// =========================
-// CLEAR ERRORS
-// =========================
+
 
 function clearErrors(form)
 {

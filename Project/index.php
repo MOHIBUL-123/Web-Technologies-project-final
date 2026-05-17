@@ -1,8 +1,7 @@
 <?php
 
-// =========================
-// SESSION
-// =========================
+
+
 
 if(session_status() === PHP_SESSION_NONE)
 {
@@ -10,9 +9,7 @@ if(session_status() === PHP_SESSION_NONE)
 }
 
 
-// =========================
-// AUTO FINE GENERATION
-// =========================
+
 
 require_once __DIR__ .
 '/helpers/fine_helper.php';
@@ -20,9 +17,7 @@ require_once __DIR__ .
 generate_fines();
 
 
-// =========================
-// ROUTER
-// =========================
+
 
 require_once 'routers.php';
 

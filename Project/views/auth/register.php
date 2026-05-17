@@ -9,7 +9,7 @@ $pageTitle = "Register";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/register.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/register.css">
 
 
 <?php require_once __DIR__ .
@@ -21,7 +21,7 @@ $pageTitle = "Register";
     <h2>Member Registration</h2>
 
 
-    <!-- FLASH MESSAGE -->
+    
 
     <?php if(isset($_SESSION['message'])): ?>
 
@@ -42,7 +42,7 @@ $pageTitle = "Register";
     <form method="POST" id="registerForm">
 
 
-        <!-- NAME -->
+        
 
         <label>Name</label>
 
@@ -63,7 +63,7 @@ $pageTitle = "Register";
         <?php endif; ?>
 
 
-        <!-- EMAIL -->
+        
 
         <label>Email</label>
 
@@ -84,7 +84,7 @@ $pageTitle = "Register";
         <?php endif; ?>
 
 
-        <!-- PHONE -->
+        
 
         <label>Phone</label>
 
@@ -105,7 +105,7 @@ $pageTitle = "Register";
         <?php endif; ?>
 
 
-        <!-- PASSWORD -->
+        
 
         <label>Password</label>
 
@@ -137,7 +137,7 @@ $pageTitle = "Register";
     <br>
 
 
-    <a href="/Library-Management-System/Project/login">
+    <a href="/project/Web-Technologies-project-final/Project/login">
 
         Already have an account?
 
@@ -146,7 +146,7 @@ $pageTitle = "Register";
 </div>
 
 
-<script src="/Library-Management-System/Project/public/js/register.js"></script>
+<script src="/project/Web-Technologies-project-final/Project/public/js/register.js"></script>
 
 <?php require_once __DIR__ .
 '/../layouts/footer.php'; ?>

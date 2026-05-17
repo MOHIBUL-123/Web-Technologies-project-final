@@ -9,7 +9,7 @@ $pageTitle = "My Profile";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/profile.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/profile.css">
 
 
 <?php require_once __DIR__ .
@@ -21,7 +21,7 @@ $pageTitle = "My Profile";
     <h1>My Profile</h1>
 
 
-    <!-- SUCCESS MESSAGE -->
+    
 <?php if(isset($_SESSION['message'])): ?>
 
     <div class="message-box <?= $_SESSION['message_type'] ?>">
@@ -38,9 +38,9 @@ $pageTitle = "My Profile";
 <?php endif; ?>
 
 
-    <!-- ========================= -->
-    <!-- UPDATE PROFILE -->
-    <!-- ========================= -->
+    
+    
+    
 
     <div class="card">
 
@@ -54,7 +54,7 @@ $pageTitle = "My Profile";
                 value="1"
             >
 
-            <!-- Name -->
+            
 
             <div class="form-group">
 
@@ -78,7 +78,7 @@ $pageTitle = "My Profile";
             </div>
 
 
-            <!-- Email -->
+            
 
             <div class="form-group">
 
@@ -102,7 +102,7 @@ $pageTitle = "My Profile";
             </div>
 
 
-            <!-- Phone -->
+            
 
             <div class="form-group">
 
@@ -137,9 +137,9 @@ $pageTitle = "My Profile";
     </div>
 
 
-    <!-- ========================= -->
-    <!-- CHANGE PASSWORD -->
-    <!-- ========================= -->
+    
+    
+    
 
     <div class="card">
 
@@ -153,7 +153,7 @@ $pageTitle = "My Profile";
                 value="1"
             >
 
-            <!-- Current Password -->
+            
 
             <div class="form-group">
 
@@ -176,7 +176,7 @@ $pageTitle = "My Profile";
             </div>
 
 
-            <!-- New Password -->
+            
 
             <div class="form-group">
 
@@ -212,7 +212,7 @@ $pageTitle = "My Profile";
 </div>
 
 
-<script src="/Library-Management-System/Project/public/js/profile.js"></script>
+<script src="/project/Web-Technologies-project-final/Project/public/js/profile.js"></script>
 
 <?php require_once __DIR__ .
 '/../layouts/footer.php'; ?>

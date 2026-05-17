@@ -14,7 +14,7 @@ $pageTitle = "Member Dashboard";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/member.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/member.css">
 
 
 <?php require_once __DIR__ .
@@ -24,7 +24,7 @@ $pageTitle = "Member Dashboard";
 <div class="dashboard-container">
 
 
-    <!-- HEADER -->
+    
 
     <div class="dashboard-header">
 
@@ -52,12 +52,12 @@ $pageTitle = "Member Dashboard";
 
 
 
-    <!-- STATS -->
+    
 
     <div class="stats-grid">
 
 
-        <!-- ACTIVE LOANS -->
+        
 
         <div class="stat-card">
 
@@ -77,7 +77,7 @@ $pageTitle = "Member Dashboard";
 
 
 
-        <!-- UPCOMING DUE -->
+        
 
         <div class="stat-card">
 
@@ -97,7 +97,7 @@ $pageTitle = "Member Dashboard";
 
 
 
-        <!-- FINES -->
+        
 
         <div class="stat-card">
 
@@ -119,25 +119,25 @@ $pageTitle = "Member Dashboard";
 
 
 
-    <!-- ACTION BUTTONS -->
+    
 
     <div class="dashboard-actions">
 
-        <a href="/Library-Management-System/Project/profile">
+        <a href="/project/Web-Technologies-project-final/Project/profile">
 
             My Profile
 
         </a>
 
 
-        <a href="/Library-Management-System/Project/my-books">
+        <a href="/project/Web-Technologies-project-final/Project/my-books">
 
             My Books
 
         </a>
 
 
-        <a href="/Library-Management-System/Project/logout">
+        <a href="/project/Web-Technologies-project-final/Project/logout">
 
             Logout
 

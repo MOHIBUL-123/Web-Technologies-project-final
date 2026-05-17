@@ -12,7 +12,6 @@ form.addEventListener("submit", function(event)
 
     clearErrors();
 
-    // Email Validation
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -23,7 +22,6 @@ form.addEventListener("submit", function(event)
         isValid = false;
     }
 
-    // Password Validation
 
     if(password.length < 8)
     {
@@ -35,7 +33,6 @@ form.addEventListener("submit", function(event)
         isValid = false;
     }
 
-    // Stop Submit
 
     if(!isValid)
     {
@@ -44,9 +41,7 @@ form.addEventListener("submit", function(event)
 });
 
 
-// =========================
-// SHOW ERROR
-// =========================
+
 
 function showError(inputId, message)
 {
@@ -59,9 +54,7 @@ function showError(inputId, message)
 }
 
 
-// =========================
-// CLEAR ERRORS
-// =========================
+
 
 function clearErrors()
 {

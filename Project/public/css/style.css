@@ -19,9 +19,7 @@
 .flash-message.warning{
     background: orange;
 }
-/* =========================
-   ERROR MESSAGE
-========================= */
+
 
 .error-message{
     width: 100%;

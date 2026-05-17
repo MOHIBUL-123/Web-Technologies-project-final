@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Borrow Module Loaded");
 
 
-    // =========================
-    // ACTIVE LOAN SEARCH
-    // =========================
+
 
     const searchInput =
         document.getElementById(
@@ -26,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const response =
                     await fetch(
-                        `/Library-Management-System/Project/api/active-loans-search?q=${query}`
+                        `/project/Web-Technologies-project-final/Project/api/active-loans-search?q=${query}`
                     );
 
 
@@ -42,8 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 tbody.innerHTML = "";
 
-
-                // NO DATA
 
                 if(loans.length === 0)
                 {
@@ -63,8 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     return;
                 }
 
-
-                // RENDER DATA
 
                 loans.forEach(loan => {
 
@@ -95,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <td>
 
                                 <form method="POST"
-                                      action="/Library-Management-System/Project/return-book">
+                                      action="/project/Web-Technologies-project-final/Project/return-book">
 
                                     <input type="hidden"
                                            name="borrow_id"
@@ -121,9 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    // =========================
-    // APPROVE REQUEST
-    // =========================
 
     document.querySelectorAll(".approve-btn")
         .forEach(button => {
@@ -138,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     const response =
                         await fetch(
-                            "/Library-Management-System/Project/approve-request",
+                            "/project/Web-Technologies-project-final/Project/approve-request",
                             {
                                 method: "POST",
 
@@ -172,9 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    // =========================
-    // REJECT REQUEST
-    // =========================
 
     document.querySelectorAll(".reject-btn")
         .forEach(button => {
@@ -189,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     const response =
                         await fetch(
-                            "/Library-Management-System/Project/reject-request",
+                            "/project/Web-Technologies-project-final/Project/reject-request",
                             {
                                 method: "POST",
 

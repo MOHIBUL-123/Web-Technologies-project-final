@@ -16,9 +16,7 @@ class Book
     }
 
 
-    // =========================
-    // GET ALL BOOKS
-    // =========================
+
 
   public function getAll()
 {
@@ -65,9 +63,7 @@ class Book
 }
 
 
-    // =========================
-    // CREATE BOOK
-    // =========================
+
 
     public function create($data)
     {
@@ -123,9 +119,7 @@ class Book
     }
 
 
-    // =========================
-    // FIND BOOK BY ID
-    // =========================
+
 
     public function findById($id)
     {
@@ -144,9 +138,9 @@ class Book
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-// =========================
-// SEARCH BOOKS
-// =========================
+
+
+
 
 public function search($query)
 {
@@ -204,9 +198,8 @@ WHERE
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-    // =========================
-    // FIND BY ISBN
-    // =========================
+
+
 
     public function findByISBN($isbn)
     {
@@ -225,9 +218,9 @@ WHERE
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-    // =========================
-// UPDATE BOOK
-// =========================
+
+
+
 
 public function update($id, $data)
 {
@@ -275,9 +268,9 @@ public function update($id, $data)
             $data['published_year']
     ]);
 }
-// =========================
-// CHECK ACTIVE BORROWS
-// =========================
+
+
+
 
 public function hasActiveBorrows($id)
 {
@@ -307,9 +300,8 @@ public function hasActiveBorrows($id)
     return $result['total'] > 0;
 }
 
-// =========================
-// DELETE BOOK
-// =========================
+
+
 
 public function delete($id)
 {
@@ -325,9 +317,9 @@ public function delete($id)
         ':id' => $id
     ]);
 }
-// =========================
-// BOOK DETAILS WITH AVAILABILITY
-// =========================
+
+
+
 
 public function findWithAvailability($id)
 {

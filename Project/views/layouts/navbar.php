@@ -6,11 +6,11 @@ require_once __DIR__ .
 ?>
 <nav class="navbar">
 
-    <!-- LOGO -->
+    
 
     <div class="logo">
 
-        <a href="/Library-Management-System/Project/">
+        <a href="/project/Web-Technologies-project-final/Project/">
 
             Library Management System
 
@@ -19,31 +19,31 @@ require_once __DIR__ .
     </div>
 
 
-    <!-- NAV LINKS -->
+    
 
     <div class="nav-links">
 
 
-        <!-- PUBLIC BOOKS -->
+        
 
-        <a href="/Library-Management-System/Project/books">
+        <a href="/project/Web-Technologies-project-final/Project/books">
 
             Books
 
         </a>
 
 
-        <!-- GUEST -->
+        
 
         <?php if(!is_logged_in()): ?>
 
-            <a href="/Library-Management-System/Project/login">
+            <a href="/project/Web-Technologies-project-final/Project/login">
 
                 Login
 
             </a>
 
-            <a href="/Library-Management-System/Project/register">
+            <a href="/project/Web-Technologies-project-final/Project/register">
 
                 Register
 
@@ -52,27 +52,27 @@ require_once __DIR__ .
         <?php endif; ?>
 
 
-        <!-- MEMBER -->
+        
 
         <?php if(has_role('member')): ?>
 
-            <a href="/Library-Management-System/Project/member">
+            <a href="/project/Web-Technologies-project-final/Project/member">
 
                 Dashboard
 
             </a>
-            <a href="/Library-Management-System/Project/my-books">
+            <a href="/project/Web-Technologies-project-final/Project/my-books">
 
     My Books
 
 </a>
-<a href="/Library-Management-System/Project/my-fines">
+<a href="/project/Web-Technologies-project-final/Project/my-fines">
 
     My Fines
 
 </a>
 
-            <a href="/Library-Management-System/Project/profile">
+            <a href="/project/Web-Technologies-project-final/Project/profile">
 
                 Profile
 
@@ -81,59 +81,47 @@ require_once __DIR__ .
         <?php endif; ?>
 
 
-        <!-- LIBRARIAN -->
+        
 
         <?php if(has_role('librarian')): ?>
 
-            <a href="/Library-Management-System/Project/librarian">
+            <a href="/project/Web-Technologies-project-final/Project/librarian">
 
                 Dashboard
 
             </a>
 
-            <a href="/Library-Management-System/Project/genres">
+            <a href="/project/Web-Technologies-project-final/Project/genres">
 
                 Genres
 
             </a>
 
-            <!-- <a href="/Library-Management-System/Project/books">
+            
+            
 
-                Books
-
-            </a> -->
-            <!-- <a href="/Library-Management-System/Project/borrow-requests">
-
-    Borrow Requests
-
-</a> -->
-<!-- <a href="/Library-Management-System/Project/active-loans">
-
-    Active Loans
-
-</a> -->
 
         <?php endif; ?>
 
 
-        <!-- ADMIN -->
+        
 
         <?php if(has_role('admin')): ?>
 
-            <a href="/Library-Management-System/Project/admin">
+            <a href="/project/Web-Technologies-project-final/Project/admin">
 
                 Dashboard
 
             </a>
 
-            <a href="/Library-Management-System/Project/genres">
+            <a href="/project/Web-Technologies-project-final/Project/genres">
 
                 Genres
 
             </a>
             <li>
 
-    <a href="/Library-Management-System/Project/reports">
+    <a href="/project/Web-Technologies-project-final/Project/reports">
 
         Reports
 
@@ -141,40 +129,34 @@ require_once __DIR__ .
 
 </li>
 
-            <!-- <a href="/Library-Management-System/Project/books">
-
-                Books
-
-            </a> -->
+            
 
         <?php endif; ?>
 
         <?php if(has_role(['admin', 'librarian'])): ?>
 
-    <!-- <a href="/Library-Management-System/Project/books">
-        Books
-    </a> -->
+    
 
-    <a href="/Library-Management-System/Project/borrow-requests">
+    <a href="/project/Web-Technologies-project-final/Project/borrow-requests">
         Borrow Requests
     </a>
 
-    <a href="/Library-Management-System/Project/active-loans">
+    <a href="/project/Web-Technologies-project-final/Project/active-loans">
         Active Loans
     </a>
 
-    <a href="/Library-Management-System/Project/fine-dashboard">
+    <a href="/project/Web-Technologies-project-final/Project/fine-dashboard">
         Fine Dashboard
     </a>
 
 <?php endif; ?>
 
 
-        <!-- LOGOUT -->
+        
 
         <?php if(is_logged_in()): ?>
 
-            <a href="/Library-Management-System/Project/logout">
+            <a href="/project/Web-Technologies-project-final/Project/logout">
 
                 Logout
 

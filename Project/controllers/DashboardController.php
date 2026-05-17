@@ -5,13 +5,11 @@ require_once __DIR__ .
 
 class DashboardController
 {
-    // MEMBER
+
 public function member()
 {
     auth_check('member');
 
-
-    // LOAD MODELS
 
     require_once __DIR__ .
     '/../models/BorrowRecord.php';
@@ -20,8 +18,6 @@ public function member()
     '/../models/Fine.php';
 
 
-    // CREATE MODEL OBJECTS
-
     $borrowModel =
         new BorrowRecord();
 
@@ -29,13 +25,9 @@ public function member()
         new Fine();
 
 
-    // MEMBER ID
-
     $memberId =
         $_SESSION['member_id'];
 
-
-    // ACTIVE LOANS
 
     $activeLoans =
         $borrowModel->getActiveLoanCount(
@@ -43,15 +35,11 @@ public function member()
         );
 
 
-    // UPCOMING DUE
-
     $upcomingDue =
         $borrowModel->getUpcomingDueCount(
             $memberId
         );
 
-
-    // OUTSTANDING FINES
 
     $outstandingFines =
         $fineModel->getOutstandingFineTotal(
@@ -59,13 +47,10 @@ public function member()
         );
 
 
-    // LOAD VIEW
-
     require_once __DIR__ .
     '/../views/dashboard/member.php';
 }
 
-    // LIBRARIAN
 
     public function librarian()
     {
@@ -75,8 +60,6 @@ public function member()
         '/../views/dashboard/librarian.php';
     }
 
-
-    // ADMIN
 
     public function admin()
     {

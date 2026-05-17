@@ -9,9 +9,7 @@ body{
 
 
 
-/* =========================
-   CONTAINER
-========================= */
+
 
 .report-container{
     width: 90%;
@@ -23,9 +21,7 @@ body{
 
 
 
-/* =========================
-   PAGE TITLE
-========================= */
+
 
 .report-container h1{
     text-align: center;
@@ -39,9 +35,7 @@ body{
 
 
 
-/* =========================
-   REPORT BOX
-========================= */
+
 
 .report-box{
     background: white;
@@ -58,9 +52,7 @@ body{
 
 
 
-/* =========================
-   SECTION TITLE
-========================= */
+
 
 .report-box h2{
     margin-bottom: 20px;
@@ -70,9 +62,7 @@ body{
 
 
 
-/* =========================
-   TABLE
-========================= */
+
 
 table{
     width: 100%;
@@ -108,9 +98,7 @@ table tbody tr:hover{
 
 
 
-/* =========================
-   CHART
-========================= */
+
 
 canvas{
     width: 100% !important;

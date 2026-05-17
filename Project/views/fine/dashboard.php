@@ -9,7 +9,7 @@ $pageTitle = "Fine Dashboard";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/fine.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/fine.css">
 
 
 <?php require_once __DIR__ .
@@ -25,7 +25,7 @@ $pageTitle = "Fine Dashboard";
     </h1>
 
 
-    <!-- SEARCH -->
+    
 
     <form method="GET"
           class="search-form">
@@ -46,7 +46,7 @@ $pageTitle = "Fine Dashboard";
     </form>
 
 
-    <!-- TABLE -->
+    
 
     <table>
 
@@ -145,7 +145,7 @@ $pageTitle = "Fine Dashboard";
 </div>
 
 
-<script src="/Library-Management-System/Project/public/js/fine.js"></script>
+<script src="/project/Web-Technologies-project-final/Project/public/js/fine.js"></script>
 
 <?php require_once __DIR__ .
 '/../layouts/footer.php'; ?>

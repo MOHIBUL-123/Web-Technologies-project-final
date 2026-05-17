@@ -4,7 +4,6 @@ class Router
 {
     private $routes = [];
 
-    // Add Route
     public function get($route, $action)
     {
         $this->routes['GET'][$route] = $action;
@@ -15,7 +14,6 @@ class Router
         $this->routes['POST'][$route] = $action;
     }
 
-    // Dispatch Route
     public function dispatch()
     {
         $requestMethod = $_SERVER['REQUEST_METHOD'];
@@ -25,8 +23,7 @@ class Router
             PHP_URL_PATH
         );
 
-        // Project Folder Remove
-        $basePath = '/Library-Management-System/Project';
+        $basePath = '/project/Web-Technologies-project-final/Project';
 
         $requestUri = str_replace(
             $basePath,
@@ -36,7 +33,6 @@ class Router
 
         $requestUri = $requestUri ?: '/';
 
-        // Route Match
         if(isset($this->routes[$requestMethod][$requestUri]))
         {
             $action =

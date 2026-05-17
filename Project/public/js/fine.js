@@ -1,6 +1,6 @@
-// =========================
-// MARK FINE AS PAID
-// =========================
+
+
+
 
 const payButtons =
     document.querySelectorAll(
@@ -19,8 +19,6 @@ payButtons.forEach(button => {
                 this.dataset.id;
 
 
-            // FORM DATA
-
             const formData =
                 new FormData();
 
@@ -30,12 +28,10 @@ payButtons.forEach(button => {
             );
 
 
-            // API CALL
-
             const response =
                 await fetch(
 
-                    "/Library-Management-System/Project/api/fines/pay",
+                    "/project/Web-Technologies-project-final/Project/api/fines/pay",
 
                     {
                         method: "POST",
@@ -48,8 +44,6 @@ payButtons.forEach(button => {
             const data =
                 await response.json();
 
-
-            // REMOVE ROW
 
             if(data.success)
             {

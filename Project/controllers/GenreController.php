@@ -8,9 +8,9 @@ require_once __DIR__ .
 
 class GenreController
 {
-    // =========================
-    // GENRE LIST
-    // =========================
+
+
+
 
     public function index()
     {
@@ -28,9 +28,7 @@ class GenreController
     }
 
 
-    // =========================
-    // CREATE GENRE
-    // =========================
+
 
     public function create()
     {
@@ -40,7 +38,6 @@ class GenreController
 
         $errors = [];
 
-        // Form Submit
 
         if(
             $_SERVER['REQUEST_METHOD'] === 'POST'
@@ -48,7 +45,6 @@ class GenreController
         {
             $name = trim($_POST['name']);
 
-            // Validation
 
             if(empty($name))
             {
@@ -63,7 +59,6 @@ class GenreController
         "Genre already exists";
 }
 
-            // Insert
 
             if(empty($errors))
             {
@@ -76,7 +71,7 @@ class GenreController
                     "success";
 
                 header(
-                    "Location: /Library-Management-System/Project/genres"
+                    "Location: /project/Web-Technologies-project-final/Project/genres"
                 );
 
                 exit;
@@ -86,9 +81,9 @@ class GenreController
         require_once __DIR__ .
         '/../views/genre/create.php';
     }
-    // =========================
-// EDIT GENRE
-// =========================
+
+
+
 
 public function edit()
 {
@@ -98,16 +93,13 @@ public function edit()
 
     $errors = [];
 
-    // Get Genre ID
 
     $id = $_GET['id'] ?? null;
 
-    // Find Genre
 
     $genre =
         $genreModel->findById($id);
 
-    // Invalid Genre
 
     if(!$genre)
     {
@@ -118,13 +110,12 @@ public function edit()
             "error";
 
         header(
-            "Location: /Library-Management-System/Project/genres"
+            "Location: /project/Web-Technologies-project-final/Project/genres"
         );
 
         exit;
     }
 
-    // Form Submit
 
     if(
         $_SERVER['REQUEST_METHOD'] === 'POST'
@@ -132,7 +123,6 @@ public function edit()
     {
         $name = trim($_POST['name']);
 
-        // Validation
 
         if(empty($name))
         {
@@ -140,7 +130,6 @@ public function edit()
                 "Genre name required";
         }
 
-        // Duplicate Check
 
         $existingGenre =
             $genreModel->findByName($name);
@@ -154,7 +143,6 @@ public function edit()
                 "Genre already exists";
         }
 
-        // Update
 
         if(empty($errors))
         {
@@ -170,7 +158,7 @@ public function edit()
                 "success";
 
             header(
-                "Location: /Library-Management-System/Project/genres"
+                "Location: /project/Web-Technologies-project-final/Project/genres"
             );
 
             exit;
@@ -180,9 +168,9 @@ public function edit()
     require_once __DIR__ .
     '/../views/genre/edit.php';
 }
-// =========================
-// DELETE GENRE
-// =========================
+
+
+
 
 public function delete()
 {
@@ -190,16 +178,13 @@ public function delete()
 
     $genreModel = new Genre();
 
-    // Get ID
 
     $id = $_POST['id'] ?? null;
 
-    // Find Genre
 
     $genre =
         $genreModel->findById($id);
 
-    // Invalid Genre
 
     if(!$genre)
     {
@@ -210,13 +195,12 @@ public function delete()
             "error";
 
         header(
-            "Location: /Library-Management-System/Project/genres"
+            "Location: /project/Web-Technologies-project-final/Project/genres"
         );
 
         exit;
     }
 
-    // Check Assigned Books
 
     if($genreModel->hasBooks($id))
     {
@@ -227,13 +211,12 @@ public function delete()
             "warning";
 
         header(
-            "Location: /Library-Management-System/Project/genres"
+            "Location: /project/Web-Technologies-project-final/Project/genres"
         );
 
         exit;
     }
 
-    // Delete Genre
 
     $genreModel->delete($id);
 
@@ -244,7 +227,7 @@ public function delete()
         "success";
 
     header(
-        "Location: /Library-Management-System/Project/genres"
+        "Location: /project/Web-Technologies-project-final/Project/genres"
     );
 
     exit;

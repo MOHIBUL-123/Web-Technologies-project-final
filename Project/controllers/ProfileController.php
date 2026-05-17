@@ -22,9 +22,7 @@ class ProfileController
     $errors = [];
 
 
-    // =========================
-    // UPDATE PROFILE
-    // =========================
+
 
     if(
         $_SERVER['REQUEST_METHOD'] === 'POST' &&
@@ -37,7 +35,6 @@ class ProfileController
 
         $phone = trim($_POST['phone']);
 
-        // Validation
 
         if(empty($name))
         {
@@ -62,11 +59,10 @@ class ProfileController
                 "Phone must be numeric";
         }
 
-        // If No Errors
 
         if(empty($errors))
         {
-            // Check Changes
+
 
             if(
                 $member['name'] === $name &&
@@ -93,7 +89,6 @@ class ProfileController
                     'phone' => $phone
                 ]);
 
-                // Update Session Name
 
                 $_SESSION['name'] = $name;
 
@@ -105,7 +100,7 @@ class ProfileController
             }
 
             header(
-                "Location: /Library-Management-System/Project/profile"
+                "Location: /project/Web-Technologies-project-final/Project/profile"
             );
 
             exit;
@@ -113,9 +108,7 @@ class ProfileController
     }
 
 
-    // =========================
-    // CHANGE PASSWORD
-    // =========================
+
 
     if(
         $_SERVER['REQUEST_METHOD'] === 'POST' &&
@@ -128,7 +121,6 @@ class ProfileController
         $newPassword =
             trim($_POST['new_password']);
 
-        // Verify Current Password
 
         if(
             !password_verify(
@@ -141,7 +133,6 @@ class ProfileController
                 "Current password incorrect";
         }
 
-        // New Password Validation
 
         if(strlen($newPassword) < 8)
         {
@@ -149,7 +140,6 @@ class ProfileController
                 "Password minimum 8 characters";
         }
 
-        // If No Errors
 
         if(empty($errors))
         {
@@ -171,7 +161,7 @@ class ProfileController
                 "success";
 
             header(
-                "Location: /Library-Management-System/Project/profile"
+                "Location: /project/Web-Technologies-project-final/Project/profile"
             );
 
             exit;

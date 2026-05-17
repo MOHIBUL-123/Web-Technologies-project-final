@@ -18,19 +18,13 @@ class ReportController
             new BorrowRecord();
 
 
-        // TOP BOOKS
-
         $topBooks =
             $borrowModel->getTopBorrowedBooks();
 
 
-        // TOP MEMBERS
-
         $topMembers =
             $borrowModel->getTopMembers();
 
-
-        // MONTHLY REPORT
 
         $monthlyBorrows =
             $borrowModel->getMonthlyBorrows();

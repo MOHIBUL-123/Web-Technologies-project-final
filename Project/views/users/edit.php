@@ -14,7 +14,7 @@ $pageTitle = "Edit User";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/create-user.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/create-user.css">
 
 
 <?php require_once __DIR__ .
@@ -33,17 +33,17 @@ $pageTitle = "Edit User";
 
 
         <form method="POST"
-              action="/Library-Management-System/Project/users/update">
+              action="/project/Web-Technologies-project-final/Project/users/update">
 
 
-            <!-- USER ID -->
+            
 
             <input type="hidden"
                    name="id"
                    value="<?= $user['id'] ?>">
 
 
-            <!-- NAME -->
+            
 
             <div class="form-group">
 
@@ -62,7 +62,7 @@ $pageTitle = "Edit User";
 
 
 
-            <!-- EMAIL -->
+            
 
             <div class="form-group">
 
@@ -81,7 +81,7 @@ $pageTitle = "Edit User";
 
 
 
-            <!-- PHONE -->
+            
 
             <div class="form-group">
 
@@ -100,7 +100,7 @@ $pageTitle = "Edit User";
 
 
 
-            <!-- ROLE -->
+            
 
             <div class="form-group">
 
@@ -142,7 +142,7 @@ $pageTitle = "Edit User";
 
 
 
-            <!-- BUTTON -->
+            
 
             <button type="submit">
 

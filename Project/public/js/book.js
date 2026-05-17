@@ -8,9 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Book Module Loaded");
 
 
-    // =========================
-    // FORM VALIDATION
-    // =========================
+
 
     const form =
         document.querySelector("form");
@@ -26,9 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 clearErrors();
 
 
-                // =========================
-                // INPUTS
-                // =========================
+
 
                 const genre =
                     document.querySelector(
@@ -66,9 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     );
 
 
-                // =========================
-                // GENRE
-                // =========================
+
 
                 if(genre.value.trim() === "")
                 {
@@ -81,9 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-                // =========================
-                // TITLE
-                // =========================
+
 
                 if(title.value.trim().length < 2)
                 {
@@ -96,9 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-                // =========================
-                // AUTHOR
-                // =========================
+
 
                 if(author.value.trim().length < 2)
                 {
@@ -111,9 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-                // =========================
-                // ISBN
-                // =========================
+
 
                 const isbnPattern =
                     /^[0-9\-]{10,20}$/;
@@ -133,9 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-                // =========================
-                // COPIES
-                // =========================
+
 
                 if(
                     copies.value <= 0
@@ -150,9 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-                // =========================
-                // SHELF
-                // =========================
+
 
                 if(
                     shelf.value.trim().length < 2
@@ -167,9 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-                // =========================
-                // YEAR
-                // =========================
+
 
                 const currentYear =
                     new Date().getFullYear();
@@ -188,9 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-                // =========================
-                // STOP SUBMIT
-                // =========================
+
 
                 if(!isValid)
                 {
@@ -201,9 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =========================
-    // SHOW ERROR
-    // =========================
+
 
     function showError(input, message)
     {
@@ -222,9 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =========================
-    // CLEAR ERRORS
-    // =========================
+
 
     function clearErrors()
     {
@@ -260,16 +236,16 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     });
-    // =========================
-// LIVE AVAILABILITY UPDATE
-// =========================
+
+
+
 
 if(typeof BOOK_ID !== "undefined")
 {
     setInterval(() => {
 
         fetch(
-            `/Library-Management-System/Project/api/books/availability?id=${BOOK_ID}`
+            `/project/Web-Technologies-project-final/Project/api/books/availability?id=${BOOK_ID}`
         )
         .then(response => response.json())
 
@@ -277,7 +253,7 @@ if(typeof BOOK_ID !== "undefined")
 
             if(data.success)
             {
-                // Count Update
+
 
                 const countElement =
                     document.querySelector(
@@ -287,8 +263,6 @@ if(typeof BOOK_ID !== "undefined")
                 countElement.innerText =
                     data.available_copies;
 
-
-                // Badge Update
 
                 const badge =
                     document.querySelector(
@@ -321,11 +295,7 @@ if(typeof BOOK_ID !== "undefined")
 
 
 
-// Only run if search exists
 
-// =========================
-// LIVE BOOK SEARCH
-// =========================
 
 const searchInput =
     document.querySelector("#search-input");
@@ -343,7 +313,7 @@ if(searchInput)
 
             const response =
                 await fetch(
-                    `/Library-Management-System/Project/api/books/search?q=${query}`
+                    `/project/Web-Technologies-project-final/Project/api/books/search?q=${query}`
                 );
 
             const books =
@@ -362,9 +332,6 @@ if(searchInput)
     let actions = "";
 
 
-    // MEMBER
-
-    // MEMBER
 
 if(currentUserRole && currentUserRole === "member")
 {
@@ -374,7 +341,7 @@ if(currentUserRole && currentUserRole === "member")
 
             <form
                 method="POST"
-                action="/Library-Management-System/Project/borrow"
+                action="/project/Web-Technologies-project-final/Project/borrow"
             >
 
                 <input
@@ -404,7 +371,6 @@ if(currentUserRole && currentUserRole === "member")
     }
 }
 
-// LIBRARIAN / ADMIN
 
 else if(
     currentUserRole &&
@@ -415,14 +381,14 @@ else if(
 
         <a
             class="edit-btn"
-            href="/Library-Management-System/Project/books/edit?id=${book.id}"
+            href="/project/Web-Technologies-project-final/Project/books/edit?id=${book.id}"
         >
             Edit
         </a>
 
         <form
             method="POST"
-            action="/Library-Management-System/Project/books/delete"
+            action="/project/Web-Technologies-project-final/Project/books/delete"
             class="delete-form"
         >
 
@@ -443,14 +409,13 @@ else if(
     `;
 }
 
-// GUEST
 
 else
 {
     actions = `
 
         <a
-            href="/Library-Management-System/Project/login"
+            href="/project/Web-Technologies-project-final/Project/login"
             class="login-btn"
         >
             Login to Borrow

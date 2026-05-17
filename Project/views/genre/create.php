@@ -9,7 +9,7 @@ $pageTitle = "Create Genre";
 
 
 <link rel="stylesheet"
-      href="/Library-Management-System/Project/public/css/genre.css">
+      href="/project/Web-Technologies-project-final/Project/public/css/genre.css">
 
 
 <?php require_once __DIR__ .
@@ -24,7 +24,7 @@ $pageTitle = "Create Genre";
 
         <form method="POST">
 
-            <!-- Genre Name -->
+            
 
             <div class="form-group">
 
@@ -59,7 +59,7 @@ $pageTitle = "Create Genre";
 
 
         <a class="back-btn"
-           href="/Library-Management-System/Project/genres">
+           href="/project/Web-Technologies-project-final/Project/genres">
 
             Back To Genres
 
@@ -68,6 +68,6 @@ $pageTitle = "Create Genre";
     </div>
 
 </div>
-<script src="/Library-Management-System/Project/public/js/genre.js"></script>
+<script src="/project/Web-Technologies-project-final/Project/public/js/genre.js"></script>
 <?php require_once __DIR__ .
 '/../layouts/footer.php'; ?>

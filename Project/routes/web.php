@@ -24,9 +24,9 @@ $router->post(
     '/profile',
     'ProfileController@profile'
 );
-// =========================
-// GENRE ROUTES
-// =========================
+
+
+
 
 $router->get(
     '/genres',
@@ -42,9 +42,9 @@ $router->post(
     '/genres/create',
     'GenreController@create'
 );
-// =========================
-// DASHBOARD ROUTES
-// =========================
+
+
+
 
 $router->get(
     '/member',
@@ -73,9 +73,9 @@ $router->post(
     '/genres/delete',
     'GenreController@delete'
 );
-// =========================
-// BOOK ROUTES
-// =========================
+
+
+
 
 $router->get(
     '/books',
@@ -104,17 +104,17 @@ $router->post(
     '/books/delete',
     'BookController@delete'
 );
-// =========================
-// BORROW ROUTES
-// =========================
+
+
+
 
 $router->post(
     '/borrow',
     'BorrowController@borrow'
 );
-// =========================
-// MEMBER BORROW ROUTES
-// =========================
+
+
+
 
 $router->get(
     '/my-books',
@@ -124,17 +124,17 @@ $router->post(
     '/return-book',
     'BorrowController@returnBook'
 );
-// =========================
-// LIBRARIAN BORROW DASHBOARD
-// =========================
+
+
+
 
 $router->get(
     '/borrow-requests',
     'BorrowController@pendingRequests'
 );
-// =========================
-// APPROVE / REJECT AJAX
-// =========================
+
+
+
 
 $router->post(
     '/approve-request',
@@ -145,9 +145,9 @@ $router->post(
     '/reject-request',
     'BorrowController@rejectRequest'
 );
-// =========================
-// ACTIVE LOANS
-// =========================
+
+
+
 
 $router->get(
     '/active-loans',

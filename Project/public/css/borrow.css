@@ -5,9 +5,7 @@
 }
 
 
-/* =========================
-   TOP BAR
-========================= */
+
 
 .top-bar{
     margin-bottom: 20px;
@@ -18,9 +16,7 @@
 }
 
 
-/* =========================
-   TABLE
-========================= */
+
 
 table{
     width: 100%;
@@ -46,9 +42,7 @@ table tr:hover{
 }
 
 
-/* =========================
-   STATUS
-========================= */
+
 
 .status{
     padding: 6px 12px;
@@ -58,7 +52,7 @@ table tr:hover{
 }
 
 
-/* ACTIVE */
+
 
 .status.active{
     background: #d1fae5;
@@ -66,7 +60,7 @@ table tr:hover{
 }
 
 
-/* RETURNED */
+
 
 .status.returned{
     background: #dbeafe;
@@ -74,7 +68,7 @@ table tr:hover{
 }
 
 
-/* OVERDUE */
+
 
 .status.overdue{
     background: #fee2e2;
@@ -82,9 +76,7 @@ table tr:hover{
 }
 
 
-/* =========================
-   FLASH MESSAGE
-========================= */
+
 
 .message-box{
     padding: 15px;
@@ -127,9 +119,7 @@ table tr:hover{
 .return-form{
     display: inline;
 }
-/* =========================
-   APPROVE BUTTON
-========================= */
+
 
 .approve-btn{
     background: #16a34a;
@@ -147,9 +137,7 @@ table tr:hover{
 }
 
 
-/* =========================
-   REJECT BUTTON
-========================= */
+
 
 .reject-btn{
     background: #dc2626;
@@ -166,9 +154,7 @@ table tr:hover{
 }
 
 
-/* =========================
-   PENDING STATUS
-========================= */
+
 
 .status.pending{
     background: #fef3c7;

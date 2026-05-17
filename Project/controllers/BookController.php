@@ -11,13 +11,13 @@ require_once __DIR__ .
 
 class BookController
 {
-    // =========================
-    // BOOK LIST
-    // =========================
+
+
+
 
     public function index()
     {
-        // auth_check(['admin', 'librarian']);
+
 
         $bookModel = new Book();
 
@@ -29,9 +29,7 @@ class BookController
     }
 
 
-    // =========================
-    // CREATE BOOK
-    // =========================
+
 
     public function create()
     {
@@ -46,7 +44,6 @@ class BookController
 
         $errors = [];
 
-        // Form Submit
 
         if(
             $_SERVER['REQUEST_METHOD'] === 'POST'
@@ -74,9 +71,7 @@ class BookController
                 trim($_POST['published_year']);
 
 
-            // =========================
-            // VALIDATION
-            // =========================
+
 
             if(empty($genreId))
             {
@@ -134,9 +129,7 @@ class BookController
             }
 
 
-            // =========================
-            // INSERT
-            // =========================
+
 
             if(empty($errors))
             {
@@ -173,7 +166,7 @@ class BookController
                     "success";
 
                 header(
-                    "Location: /Library-Management-System/Project/books"
+                    "Location: /project/Web-Technologies-project-final/Project/books"
                 );
 
                 exit;
@@ -183,9 +176,9 @@ class BookController
         require_once __DIR__ .
         '/../views/book/create.php';
     }
-    // =========================
-// EDIT BOOK
-// =========================
+
+
+
 
 public function edit()
 {
@@ -200,16 +193,13 @@ public function edit()
 
     $errors = [];
 
-    // Get Book ID
 
     $id = $_GET['id'] ?? null;
 
-    // Find Book
 
     $book =
         $bookModel->findById($id);
 
-    // Invalid Book
 
     if(!$book)
     {
@@ -220,13 +210,12 @@ public function edit()
             "error";
 
         header(
-            "Location: /Library-Management-System/Project/books"
+            "Location: /project/Web-Technologies-project-final/Project/books"
         );
 
         exit;
     }
 
-    // Form Submit
 
     if(
         $_SERVER['REQUEST_METHOD'] === 'POST'
@@ -254,9 +243,7 @@ public function edit()
             trim($_POST['published_year']);
 
 
-        // =========================
-        // VALIDATION
-        // =========================
+
 
         if(empty($genreId))
         {
@@ -282,7 +269,6 @@ public function edit()
                 "ISBN required";
         }
 
-        // Duplicate ISBN Check
 
         $existingBook =
             $bookModel->findByISBN($isbn);
@@ -326,9 +312,7 @@ public function edit()
         }
 
 
-        // =========================
-        // UPDATE
-        // =========================
+
 
         if(empty($errors))
         {
@@ -368,7 +352,7 @@ public function edit()
                 "success";
 
             header(
-                "Location: /Library-Management-System/Project/books"
+                "Location: /project/Web-Technologies-project-final/Project/books"
             );
 
             exit;
@@ -378,9 +362,9 @@ public function edit()
     require_once __DIR__ .
     '/../views/book/edit.php';
 }
-// =========================
-// DELETE BOOK
-// =========================
+
+
+
 
 public function delete()
 {
@@ -388,16 +372,13 @@ public function delete()
 
     $bookModel = new Book();
 
-    // Get ID
 
     $id = $_POST['id'] ?? null;
 
-    // Find Book
 
     $book =
         $bookModel->findById($id);
 
-    // Invalid Book
 
     if(!$book)
     {
@@ -408,12 +389,12 @@ public function delete()
             "error";
 
         header(
-            "Location: /Library-Management-System/Project/books"
+            "Location: /project/Web-Technologies-project-final/Project/books"
         );
 
         exit;
     }
-// Check Active Borrows
+
 
 if(
     $bookModel->hasActiveBorrows($id)
@@ -426,12 +407,12 @@ if(
         "warning";
 
     header(
-        "Location: /Library-Management-System/Project/books"
+        "Location: /project/Web-Technologies-project-final/Project/books"
     );
 
     exit;
 }
-    // Delete
+
 
     $bookModel->delete($id);
 
@@ -442,14 +423,14 @@ if(
         "success";
 
     header(
-        "Location: /Library-Management-System/Project/books"
+        "Location: /project/Web-Technologies-project-final/Project/books"
     );
 
     exit;
 }
-// =========================
-// BOOK DETAILS
-// =========================
+
+
+
 
 public function details()
 {
@@ -473,9 +454,9 @@ public function details()
     require_once __DIR__ .
     '/../views/book/details.php';
 }
-// =========================
-// BOOK AVAILABILITY API
-// =========================
+
+
+
 
 public function availability()
 {
@@ -517,9 +498,9 @@ public function availability()
 
     exit;
 }
-// =========================
-// SEARCH API
-// =========================
+
+
+
 
 public function searchApi()
 {
@@ -530,13 +511,9 @@ public function searchApi()
         trim($_GET['q'] ?? '');
 
 
-    // SEARCH
-
     $books =
         $bookModel->search($query);
 
-
-    // JSON RESPONSE
 
     header(
         'Content-Type: application/json'

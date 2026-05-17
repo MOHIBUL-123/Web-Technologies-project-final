@@ -11,13 +11,13 @@ require_once __DIR__ .
 
 class BorrowController
 {
-    // =========================
-    // BORROW BOOK
-    // =========================
+
+
+
 
     public function borrow()
     {
-        // Only Members
+
 
         auth_check('member');
 
@@ -28,8 +28,6 @@ class BorrowController
             new BorrowRecord();
 
 
-        // Get Book ID
-
         $bookId =
             $_POST['book_id'] ?? null;
 
@@ -37,13 +35,9 @@ class BorrowController
             $_SESSION['member_id'];
 
 
-        // Find Book
-
         $book =
             $bookModel->findById($bookId);
 
-
-        // Invalid Book
 
         if(!$book)
         {
@@ -54,16 +48,14 @@ class BorrowController
                 "error";
 
             header(
-                "Location: /Library-Management-System/Project/books"
+                "Location: /project/Web-Technologies-project-final/Project/books"
             );
 
             exit;
         }
 
 
-        // =========================
-        // CHECK AVAILABLE COPIES
-        // =========================
+
 
         $books =
             $bookModel->getAll();
@@ -91,16 +83,14 @@ class BorrowController
                 "warning";
 
             header(
-                "Location: /Library-Management-System/Project/books"
+                "Location: /project/Web-Technologies-project-final/Project/books"
             );
 
             exit;
         }
 
 
-        // =========================
-        // DUPLICATE BORROW CHECK
-        // =========================
+
 
         if(
             $borrowModel->alreadyBorrowed(
@@ -116,16 +106,14 @@ class BorrowController
                 "warning";
 
             header(
-                "Location: /Library-Management-System/Project/books"
+                "Location: /project/Web-Technologies-project-final/Project/books"
             );
 
             exit;
         }
 
 
-        // =========================
-        // CREATE BORROW
-        // =========================
+
 
         $borrowDate =
             date('Y-m-d');
@@ -156,8 +144,6 @@ class BorrowController
         $borrowModel->create($data);
 
 
-        // Success Message
-
         $_SESSION['message'] =
             "Book Borrowed Successfully";
 
@@ -165,14 +151,14 @@ class BorrowController
             "success";
 
         header(
-            "Location: /Library-Management-System/Project/books"
+            "Location: /project/Web-Technologies-project-final/Project/books"
         );
 
         exit;
     }
-    // =========================
-// MEMBER BORROW LIST
-// =========================
+
+
+
 
 public function myBooks()
 {
@@ -192,13 +178,12 @@ public function myBooks()
     require_once __DIR__ .
     '/../views/borrow/my_books.php';
 }
-// =========================
-// RETURN BOOK
-// =========================
 
-// =========================
-// PROCESS RETURN
-// =========================
+
+
+
+
+
 
 public function returnBook()
 {
@@ -210,8 +195,6 @@ public function returnBook()
     $borrowId =
         $_POST['borrow_id'] ?? null;
 
-
-    // Process Return
 
     $returned =
         $borrowModel->processReturn(
@@ -238,14 +221,14 @@ public function returnBook()
 
 
     header(
-        "Location: /Library-Management-System/Project/active-loans"
+        "Location: /project/Web-Technologies-project-final/Project/active-loans"
     );
 
     exit;
 }
-// =========================
-// PENDING BORROW REQUESTS
-// =========================
+
+
+
 
 public function pendingRequests()
 {
@@ -260,9 +243,9 @@ public function pendingRequests()
     require_once __DIR__ .
     '/../views/borrow/pending_requests.php';
 }
-// =========================
-// APPROVE REQUEST
-// =========================
+
+
+
 
 public function approveRequest()
 {
@@ -290,9 +273,6 @@ public function approveRequest()
 
 
 
-// =========================
-// REJECT REQUEST
-// =========================
 
 public function rejectRequest()
 {
@@ -317,9 +297,9 @@ public function rejectRequest()
 
     exit;
 }
-// =========================
-// ACTIVE LOANS
-// =========================
+
+
+
 
 public function activeLoans()
 {

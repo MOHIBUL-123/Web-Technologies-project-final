@@ -6,15 +6,13 @@ if(session_status() === PHP_SESSION_NONE)
 }
 
 
-// =========================
-// AUTH CHECK
-// =========================
+
 
 function auth_check($roles = null)
 {
-    // =========================
-    // USER NOT LOGGED IN
-    // =========================
+
+
+
 
     if(!isset($_SESSION['member_id']))
     {
@@ -25,26 +23,24 @@ function auth_check($roles = null)
             "warning";
 
         header(
-            "Location: /Library-Management-System/Project/login"
+            "Location: /project/Web-Technologies-project-final/Project/login"
         );
 
         exit;
     }
 
-    // =========================
-    // ROLE CHECK
-    // =========================
+
+
 
     if($roles !== null)
     {
-        // Convert Single Role To Array
+
 
         if(!is_array($roles))
         {
             $roles = [$roles];
         }
 
-        // Invalid Access
 
         if(
             !in_array(
@@ -59,14 +55,13 @@ function auth_check($roles = null)
             $_SESSION['message_type'] =
                 "error";
 
-            // Redirect Based On Role
 
             switch($_SESSION['role'])
             {
                 case 'admin':
 
                     header(
-                        "Location: /Library-Management-System/Project/admin"
+                        "Location: /project/Web-Technologies-project-final/Project/admin"
                     );
 
                     break;
@@ -74,7 +69,7 @@ function auth_check($roles = null)
                 case 'librarian':
 
                     header(
-                        "Location: /Library-Management-System/Project/librarian"
+                        "Location: /project/Web-Technologies-project-final/Project/librarian"
                     );
 
                     break;
@@ -82,7 +77,7 @@ function auth_check($roles = null)
                 default:
 
                     header(
-                        "Location: /Library-Management-System/Project/member"
+                        "Location: /project/Web-Technologies-project-final/Project/member"
                     );
             }
 
@@ -92,9 +87,7 @@ function auth_check($roles = null)
 }
 
 
-// =========================
-// CHECK LOGIN
-// =========================
+
 
 function is_logged_in()
 {
@@ -102,9 +95,7 @@ function is_logged_in()
 }
 
 
-// =========================
-// CHECK ROLE
-// =========================
+
 
 function has_role($roles)
 {
